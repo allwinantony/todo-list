@@ -1,0 +1,15 @@
+<h1 class="text-center">{{title}}</h1>
+<div>
+<form class="bg-dark text-center p-5">
+<input type="text" placeholder="Enter a New Task" #task />
+<button type="submit" (click)="addTask(task.value)">Add</button>
+<br><br><br>
+</form>
+</div>
+<div class="bg-warning">
+<ul *ngFor="let item of list">
+
+    <li>{{item.name}}<button (click)="removeTask(item.id)">Remove</button></li>
+
+</ul>
+</div>
